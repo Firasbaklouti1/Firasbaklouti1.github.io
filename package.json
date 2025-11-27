@@ -2,6 +2,7 @@
   "name": "firas-baklouti-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Firasbaklouti1.github.io",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
