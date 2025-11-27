@@ -1,7 +1,4 @@
-"use server"
-
 import { z } from "zod"
-import nodemailer from "nodemailer"
 
 // Form validation schema
 const formSchema = z.object({
@@ -25,43 +22,25 @@ export async function sendContactEmail(formData: FormData) {
 
     const { name, email, subject, message } = validatedFields.data
 
-    // Create a transporter
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+    // Log contact form submission (for static site)
+    console.log("Contact Form Submission:", {
+      name,
+      email,
+      subject,
+      message,
+      timestamp: new Date().toISOString(),
     })
 
-    // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
-      subject: `Portfolio Contact: ${subject}`,
-      text: `
-        Name: ${name}
-        Email: ${email}
-        
-        Message:
-        ${message}
-      `,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <h3>Message:</h3>
-        <p>${message}</p>
-      `,
-    }
-
-    // Send email
-    await transporter.sendMail(mailOptions)
+    // Simulate successful submission
+    // Note: For actual email sending, integrate a third-party service like:
+    // - Formspree (https://formspree.io/)
+    // - EmailJS (https://www.emailjs.com/)
+    // - Getform (https://getform.io/)
+    // Or deploy to a platform with server-side capabilities (Vercel, Netlify, etc.)
 
     return { success: true }
   } catch (error) {
-    console.error("Error sending email:", error)
-    return { success: false, error: "Failed to send email. Please try again later." }
+    console.error("Error processing contact form:", error)
+    return { success: false, error: "Failed to send message. Please try again later." }
   }
 }
