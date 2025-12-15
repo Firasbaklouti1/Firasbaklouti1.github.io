@@ -70,7 +70,7 @@ export function HeroSection() {
                 <ExternalLink className="w-6 h-6" />
               </Link>
               <Link
-                href="https://github.com/firasb"
+                href="https://github.com/Firasbaklouti1"
                 target="_blank"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
                 aria-label="GitHub Profile"
