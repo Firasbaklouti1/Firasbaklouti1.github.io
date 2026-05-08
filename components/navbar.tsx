@@ -117,7 +117,7 @@ export function Navbar() {
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{isOpen ? "Close main menu" : "Open main menu"}</span>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </motion.div>
