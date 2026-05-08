@@ -114,9 +114,10 @@ export function Navbar() {
             <button
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none"
-              aria-expanded="false"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{isOpen ? "Close main menu" : "Open main menu"}</span>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </motion.div>
@@ -127,6 +128,7 @@ export function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             className="md:hidden bg-white dark:bg-gray-900 shadow-lg"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}

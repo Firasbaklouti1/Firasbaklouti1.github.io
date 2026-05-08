@@ -73,8 +73,17 @@ export function CertificationsSection() {
             {certificates.map((cert, index) => (
               <AnimatedCard key={cert.id} delay={0.2 + index * 0.1}>
                 <Card
-                  className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 cursor-pointer group relative z-10"
+                  className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 cursor-pointer group relative z-10 focus-within:ring-2 focus-within:ring-purple-600 outline-none"
                   onClick={() => setSelectedCertificate(cert)}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`View certificate for ${cert.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault()
+                      setSelectedCertificate(cert)
+                    }
+                  }}
                 >
                   <CardHeader className="pb-2">
                     <div className="flex items-center justify-between mb-2">
