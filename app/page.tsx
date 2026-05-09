@@ -743,7 +743,7 @@ export default function Home() {
                       className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                       rel="noreferrer"
                     >
-                      linkedin Profile
+                      LinkedIn Profile
                     </a>
                   </div>
                 </div>
@@ -794,7 +794,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/firas-baklouti-68baa72b0/"
                 target="_blank"
                 className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-                aria-label="linkedin"
+                aria-label="LinkedIn"
               >
                 <ExternalLink className="w-5 h-5" />
               </Link>
