@@ -192,16 +192,16 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link
-                    href="https://github.com/Firasbaklouti1/sarcasm-detection-machine-learning-project"
-                    target="_blank"
-                  >
-                    <Button variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                  <Button asChild variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                    <Link
+                      href="https://github.com/Firasbaklouti1/sarcasm-detection-machine-learning-project"
+                      target="_blank"
+                    >
                       <ExternalLink className="w-4 h-4 mr-2" />
                       <span className="relative z-10">View Project</span>
                       <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </AnimatedCard>
@@ -254,13 +254,13 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link href="https://github.com/Firasbaklouti1/carRentalWebsite" target="_blank">
-                    <Button variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                  <Button asChild variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                    <Link href="https://github.com/Firasbaklouti1/carRentalWebsite" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       <span className="relative z-10">View Project</span>
                       <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </AnimatedCard>
@@ -313,13 +313,13 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link href="https://urbanova.tn" target="_blank">
-                    <Button variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                  <Button asChild variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                    <Link href="https://urbanova.tn" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       <span className="relative z-10">View Project</span>
                       <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </AnimatedCard>
@@ -376,13 +376,13 @@ export default function Home() {
                   </div>
                 </CardContent>
                 <CardFooter>
-                  <Link href="https://github.com/Firasbaklouti1/Driving-School-Management-System" target="_blank">
-                    <Button variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                  <Button asChild variant="outline" className="w-full relative overflow-hidden group bg-transparent">
+                    <Link href="https://github.com/Firasbaklouti1/Driving-School-Management-System" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       <span className="relative z-10">View Project</span>
                       <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             </AnimatedCard>
