@@ -29,11 +29,11 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      <main id="main-content">
-      {/* Hero Section */}
-      <HeroSection />
+      <main id="main-content" tabIndex={-1}>
+        {/* Hero Section */}
+        <HeroSection />
 
-      {/* About Section - Updated bio for Firas */}
+        {/* About Section - Updated bio for Firas */}
       <section id="about" className="py-16 px-4 bg-white dark:bg-gray-800 relative overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
@@ -765,6 +765,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      </main>
 
       {/* Footer - Updated for Firas */}
       </main>
