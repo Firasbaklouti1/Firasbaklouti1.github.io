@@ -6,8 +6,13 @@ import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
+import portfolioDataRaw from "@/public/data/portfolio.json"
+import { PortfolioData } from "@/types/portfolio"
+
+const portfolioData = portfolioDataRaw as unknown as PortfolioData
 
 export function Navbar() {
+  const { personalInfo, navLinks } = portfolioData
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -27,15 +32,6 @@ export function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-
-  const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Certifications", href: "#certifications" },
-    { name: "Contact", href: "#contact" },
-  ]
 
   return (
     <motion.nav
@@ -58,7 +54,7 @@ export function Navbar() {
               href="/"
               className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
             >
-              Firas B.
+              {personalInfo.name}
             </Link>
           </motion.div>
 
@@ -94,7 +90,7 @@ export function Navbar() {
               transition={{ delay: 0.8 }}
             >
               <Button asChild variant="outline" size="sm" className="relative overflow-hidden group bg-transparent">
-                <Link href="/documents/firas-resume.pdf" target="_blank" download>
+                <Link href={personalInfo.resumeUrl} target="_blank" download>
                   <span className="relative z-10">Download Resume</span>
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Link>

@@ -1,0 +1,262 @@
+{
+  "personalInfo": {
+    "name": "Firas B.",
+    "fullName": "Firas Baklouti",
+    "title": "Software Engineer",
+    "location": "Bizerte, Tunisia",
+    "email": "firas@example.com",
+    "profileImage": "/images/profile.png",
+    "resumeUrl": "/documents/firas-resume.pdf",
+    "shortBio": "Specializing in Java (Spring Boot), Python automation/AI, and React/Next.js for building reliable, scalable and cleanly-architected applications."
+  },
+  "navLinks": [
+    { "name": "About", "href": "#about" },
+    { "name": "Experience", "href": "#experience" },
+    { "name": "Projects", "href": "#projects" },
+    { "name": "Skills", "href": "#skills" },
+    { "name": "Certifications", "href": "#certifications" },
+    { "name": "Contact", "href": "#contact" }
+  ],
+  "socialLinks": [
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com/freelancers/~01809538bb054905e6",
+      "platform": "upwork"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/Firasbaklouti1",
+      "platform": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/firas-baklouti-68baa72b0/",
+      "platform": "linkedin"
+    },
+    {
+      "name": "StackOverflow",
+      "url": "https://stackoverflow.com",
+      "platform": "stackoverflow"
+    }
+  ],
+  "about": {
+    "paragraphs": [
+      "Hi! I'm Firas — a dedicated software engineer with strong experience in Java (Spring Boot), Python automation/AI, and React/Next.js for building reliable, scalable and cleanly-architected applications.",
+      "I've worked on full systems including backend, frontend, automation tools, and AI-driven modules. I focus on writing clean, maintainable code that delivers real value.",
+      "Based in Bizerte, Tunisia, I'm currently pursuing my Engineer's degree at Université Tunis Carthage (2024-2026) while building practical experience through freelance work."
+    ],
+    "keyExpertise": [
+      "Full-Stack Development with Java Spring Boot & React/Next.js",
+      "Python Automation & AI Agent Development",
+      "Machine Learning & Deep Learning",
+      "REST API Design & Integration",
+      "Docker, Git & DevOps Practices"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Software Engineer Student",
+      "company": "Faculté de Science de Bizerte",
+      "period": "September 2023 - Present",
+      "responsibilities": [
+        "Developing full-stack applications using Java Spring Boot, Python, and React/Next.js",
+        "Building AI-driven modules and automation tools for various projects",
+        "Working on machine learning and deep learning implementations"
+      ]
+    },
+    {
+      "title": "Freelance Software Engineer",
+      "company": "Upwork",
+      "period": "2022 - Present",
+      "responsibilities": [
+        "Building reliable, scalable web applications for international clients",
+        "Specializing in Java, Python AI/automation, and React/Next.js development",
+        "Delivering clean, maintainable code with focus on solution-oriented outcomes"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Sarcasm Detection — ML/NLP Project",
+      "description": "Machine Learning & Natural Language Processing",
+      "details": "Built a machine learning model to detect sarcasm in text using NLP techniques. Implemented various classification algorithms and natural language processing methods.",
+      "image": "/sarcasm-detection-nlp-machine-learning.png",
+      "link": "https://github.com/Firasbaklouti1/sarcasm-detection-machine-learning-project",
+      "tags": ["Machine Learning", "NLP", "Python", "Deep Learning"]
+    },
+    {
+      "title": "Car Rental Website",
+      "description": "Full-Stack Web Application",
+      "details": "Developed a comprehensive car rental platform with booking system, user authentication, and admin dashboard for fleet management.",
+      "image": "/car-rental-website-modern-ui.png",
+      "link": "https://github.com/Firasbaklouti1/carRentalWebsite",
+      "tags": ["React", "JavaScript", "REST API", "Web Development"]
+    },
+    {
+      "title": "Urbanova — Custom Apparel Platform",
+      "description": "Full-Stack E-commerce Solution",
+      "details": "Built a custom apparel e-commerce platform with Spring Boot backend and React frontend. Features include product customization, order management, and payment integration.",
+      "image": "/custom-apparel-ecommerce-platform.png",
+      "link": "https://urbanova.tn",
+      "tags": ["Spring Boot", "React", "Java", "REST API"]
+    },
+    {
+      "title": "Driving School Management System",
+      "description": "Complete management system for a driving school, built using Java, JavaFX, and MySQL",
+      "details": "Complete management system for a driving school, built using Java, JavaFX, and MySQL. I designed the architecture, implemented candidate management, payments, instructors, scheduling, and a financial dashboard. The system includes layered code structure, reusable components, and optimized database operations for real business workflows.",
+      "image": "/driving-school-management-system.png",
+      "link": "https://github.com/Firasbaklouti1/Driving-School-Management-System",
+      "tags": ["Java", "JavaFX", "MySQL", "Desktop Application"]
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "title": "Backend Development",
+        "shortTitle": "BE",
+        "color": "purple",
+        "styles": {
+          "iconBg": "bg-purple-100 dark:bg-purple-900",
+          "iconText": "text-purple-600 dark:text-purple-300",
+          "badgeHover": "hover:bg-purple-100 dark:hover:bg-purple-900/50"
+        },
+        "skills": ["Java", "Spring Boot", "Python", "REST API", "JavaFX", "Docker"]
+      },
+      {
+        "title": "Frontend Development",
+        "shortTitle": "FE",
+        "color": "blue",
+        "styles": {
+          "iconBg": "bg-blue-100 dark:bg-blue-900",
+          "iconText": "text-blue-600 dark:text-blue-300",
+          "badgeHover": "hover:bg-blue-100 dark:hover:bg-blue-900/50"
+        },
+        "skills": ["React", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"]
+      },
+      {
+        "title": "AI & Machine Learning",
+        "shortTitle": "AI",
+        "color": "green",
+        "styles": {
+          "iconBg": "bg-green-100 dark:bg-green-900",
+          "iconText": "text-green-600 dark:text-green-300",
+          "badgeHover": "hover:bg-green-100 dark:hover:bg-green-900/50"
+        },
+        "skills": ["Machine Learning", "Deep Learning", "AI Agent Development", "NLP", "Automation", "Data Analysis"]
+      },
+      {
+        "title": "Tools & DevOps",
+        "shortTitle": "OPS",
+        "color": "orange",
+        "styles": {
+          "iconBg": "bg-orange-100 dark:bg-orange-900",
+          "iconText": "text-orange-600 dark:text-orange-300",
+          "badgeHover": "hover:bg-orange-100 dark:hover:bg-orange-900/50"
+        },
+        "skills": ["Git", "GitHub", "Docker", "VS Code", "IntelliJ IDEA", "Postman"]
+      }
+    ],
+    "softSkills": [
+      {
+        "name": "Solution Oriented",
+        "color": "purple",
+        "styles": {
+          "badge": "bg-purple-50 dark:bg-purple-900/20",
+          "border": "border-purple-200 dark:border-purple-800",
+          "hover": "hover:bg-purple-100 dark:hover:bg-purple-900/40"
+        }
+      },
+      {
+        "name": "Accountable for Outcomes",
+        "color": "blue",
+        "styles": {
+          "badge": "bg-blue-50 dark:bg-blue-900/20",
+          "border": "border-blue-200 dark:border-blue-800",
+          "hover": "hover:bg-blue-100 dark:hover:bg-blue-900/40"
+        }
+      },
+      {
+        "name": "Arabic (Native)",
+        "color": "green",
+        "styles": {
+          "badge": "bg-green-50 dark:bg-green-900/20",
+          "border": "border-green-200 dark:border-green-800",
+          "hover": "hover:bg-green-100 dark:hover:bg-green-900/40"
+        }
+      },
+      {
+        "name": "English (Conversational)",
+        "color": "yellow",
+        "styles": {
+          "badge": "bg-yellow-50 dark:bg-yellow-900/20",
+          "border": "border-yellow-200 dark:border-yellow-800",
+          "hover": "hover:bg-yellow-100 dark:hover:bg-yellow-900/40"
+        }
+      },
+      {
+        "name": "French (Conversational)",
+        "color": "red",
+        "styles": {
+          "badge": "bg-red-50 dark:bg-red-900/20",
+          "border": "border-red-200 dark:border-red-800",
+          "hover": "hover:bg-red-100 dark:hover:bg-red-900/40"
+        }
+      }
+    ]
+  },
+  "education": {
+    "degrees": [
+      {
+        "title": "Engineer's Degree",
+        "institution": "Université Tunis Carthage",
+        "period": "2024 - 2026 (Expected)",
+        "description": "Currently pursuing an Engineer's degree with focus on software engineering, AI, and full-stack development."
+      }
+    ],
+    "linkedAccounts": [
+      {
+        "name": "GitHub",
+        "description": "Active since 2022 - Version control & open source contributions"
+      },
+      {
+        "name": "StackOverflow",
+        "description": "Community participation & knowledge sharing"
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "id": "stat-python-1",
+      "number": "#43,988,459",
+      "title": "Statistical Thinking in Python (Part 1)",
+      "issuer": "DataCamp",
+      "duration": "3 Hours",
+      "completedDate": "October 26, 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Successfully completed course covering fundamental statistical concepts and their implementation in Python.",
+      "pdfUrl": "/documents/certificates/statistical-thinking-python-1.pdf"
+    },
+    {
+      "id": "stat-python-2",
+      "number": "#43,988,764",
+      "title": "Statistical Thinking in Python (Part 2)",
+      "issuer": "DataCamp",
+      "duration": "4 Hours",
+      "completedDate": "October 26, 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Advanced statistical thinking concepts including hypothesis testing and bootstrap analysis in Python.",
+      "pdfUrl": "/documents/certificates/statistical-thinking-python-2.pdf"
+    },
+    {
+      "id": "case-studies",
+      "number": "#43,989,028",
+      "title": "Case Studies in Statistical Thinking",
+      "issuer": "DataCamp",
+      "duration": "4 Hours",
+      "completedDate": "October 26, 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Real-world case studies applying statistical thinking to analyze data and draw meaningful conclusions.",
+      "pdfUrl": "/documents/certificates/case-studies-statistical-thinking.pdf"
+    }
+  ]
+}
