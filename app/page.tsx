@@ -30,8 +30,8 @@ export default function Home() {
       <Navbar />
 
       <main id="main-content" tabIndex={-1} className="outline-none">
-        {/* Hero Section */}
-        <HeroSection />
+      {/* Hero Section */}
+      <HeroSection />
 
         {/* About Section - Updated bio for Firas */}
       <section id="about" className="py-16 px-4 bg-white dark:bg-gray-800 relative overflow-hidden">
@@ -44,15 +44,15 @@ export default function Home() {
             <AnimatedSection direction="left" delay={0.2}>
               <div className="space-y-4">
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  Hi! I'm Firas — a dedicated software engineer with strong experience in Java (Spring Boot), Python
+                  Hi! I&apos;m Firas — a dedicated software engineer with strong experience in Java (Spring Boot), Python
                   automation/AI, and React/Next.js for building reliable, scalable and cleanly-architected applications.
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  I've worked on full systems including backend, frontend, automation tools, and AI-driven modules. I
+                  I&apos;ve worked on full systems including backend, frontend, automation tools, and AI-driven modules. I
                   focus on writing clean, maintainable code that delivers real value.
                 </p>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
-                  Based in Bizerte, Tunisia, I'm currently pursuing my Engineer's degree at Université Tunis Carthage
+                  Based in Bizerte, Tunisia, I&apos;m currently pursuing my Engineer&apos;s degree at Université Tunis Carthage
                   (2024-2026) while building practical experience through freelance work.
                 </p>
               </div>
@@ -666,13 +666,13 @@ export default function Home() {
               <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex flex-col md:flex-row justify-between mb-4">
                   <div>
-                    <h4 className="text-xl font-semibold">Engineer's Degree</h4>
+                    <h4 className="text-xl font-semibold">Engineer&apos;s Degree</h4>
                     <p className="text-purple-600 dark:text-purple-400">Université Tunis Carthage</p>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 mt-2 md:mt-0">2024 - 2026 (Expected)</p>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Currently pursuing an Engineer's degree with focus on software engineering, AI, and full-stack
+                  Currently pursuing an Engineer&apos;s degree with focus on software engineering, AI, and full-stack
                   development.
                 </p>
               </div>
@@ -750,7 +750,7 @@ export default function Home() {
                 </div>
                 <div className="pt-4">
                   <p className="text-gray-700 dark:text-gray-300">
-                    Based in Bizerte, Tunisia. I'm available for freelance projects and always open to discussing new
+                    Based in Bizerte, Tunisia. I&apos;m available for freelance projects and always open to discussing new
                     opportunities or partnerships. Feel free to reach out!
                   </p>
                 </div>
