@@ -6,60 +6,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { AnimatedSection, AnimatedCard } from "@/components/client-animations"
 import { CertificateViewer } from "@/components/certificate-viewer"
+import portfolioDataRaw from "@/public/data/portfolio.json"
+import { PortfolioData, Certification } from "@/types/portfolio"
 
-interface Certificate {
-  id: string
-  number: string
-  title: string
-  issuer: string
-  duration: string
-  completedDate: string
-  issuedBy: string
-  description: string
-  pdfUrl: string
-}
-
-const certificates: Certificate[] = [
-  {
-    id: "stat-python-1",
-    number: "#43,988,459",
-    title: "Statistical Thinking in Python (Part 1)",
-    issuer: "DataCamp",
-    duration: "3 Hours",
-    completedDate: "October 26, 2025",
-    issuedBy: "Jonathan Cornelissen, CEO",
-    description:
-      "Successfully completed course covering fundamental statistical concepts and their implementation in Python.",
-    pdfUrl: "/documents/certificates/statistical-thinking-python-1.pdf",
-  },
-  {
-    id: "stat-python-2",
-    number: "#43,988,764",
-    title: "Statistical Thinking in Python (Part 2)",
-    issuer: "DataCamp",
-    duration: "4 Hours",
-    completedDate: "October 26, 2025",
-    issuedBy: "Jonathan Cornelissen, CEO",
-    description:
-      "Advanced statistical thinking concepts including hypothesis testing and bootstrap analysis in Python.",
-    pdfUrl: "/documents/certificates/statistical-thinking-python-2.pdf",
-  },
-  {
-    id: "case-studies",
-    number: "#43,989,028",
-    title: "Case Studies in Statistical Thinking",
-    issuer: "DataCamp",
-    duration: "4 Hours",
-    completedDate: "October 26, 2025",
-    issuedBy: "Jonathan Cornelissen, CEO",
-    description:
-      "Real-world case studies applying statistical thinking to analyze data and draw meaningful conclusions.",
-    pdfUrl: "/documents/certificates/case-studies-statistical-thinking.pdf",
-  },
-]
+const portfolioData = portfolioDataRaw as unknown as PortfolioData
 
 export function CertificationsSection() {
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null)
+  const { certifications } = portfolioData
+  const [selectedCertificate, setSelectedCertificate] = useState<Certification | null>(null)
 
   return (
     <>
@@ -70,7 +24,7 @@ export function CertificationsSection() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {certificates.map((cert, index) => (
+            {certifications.map((cert, index) => (
               <AnimatedCard key={cert.id} delay={0.2 + index * 0.1}>
                 <Card
                   className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white dark:bg-gray-800 cursor-pointer group relative z-10 focus-within:ring-2 focus-within:ring-purple-600 outline-none"
