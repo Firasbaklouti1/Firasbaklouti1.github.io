@@ -29,7 +29,7 @@ export default function Home() {
       {/* Navigation */}
       <Navbar />
 
-      <main id="main-content" tabIndex={-1}>
+      <main id="main-content" tabIndex={-1} className="outline-none">
         {/* Hero Section */}
         <HeroSection />
 
