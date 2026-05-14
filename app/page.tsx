@@ -769,7 +769,6 @@ export default function Home() {
       </main>
 
       {/* Footer - Updated for Firas */}
-      </main>
       <footer className="py-8 px-4 bg-gray-800 dark:bg-gray-950 text-white relative">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
