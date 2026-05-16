@@ -75,7 +75,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="px-3 py-2 text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors relative group"
+                    className="px-3 py-2 text-sm font-medium hover:text-purple-600 dark:hover:text-purple-400 transition-colors relative group focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-sm outline-none"
                   >
                     {link.name}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300"></span>
