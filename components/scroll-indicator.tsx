@@ -29,6 +29,11 @@ export function ScrollIndicator() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
+      role="progressbar"
+      aria-label="Page scroll progress"
+      aria-valuenow={Math.round(scrollProgress * 100)}
+      aria-valuemin={0}
+      aria-valuemax={100}
     />
   )
 }
