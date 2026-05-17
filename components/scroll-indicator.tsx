@@ -8,7 +8,7 @@ export function ScrollIndicator() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Use window.innerHeight to calculate the scrollable height.
+      // Use document.documentElement.clientHeight to calculate the scrollable height.
       // Guard against division by zero as per Palette's Journal.
       const scrollHeight = document.documentElement.scrollHeight
       const clientHeight = document.documentElement.clientHeight
