@@ -8,19 +8,27 @@ export function ScrollIndicator() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const totalHeight = document.body.scrollHeight - window.innerHeight
+      // Use window.innerHeight to calculate the scrollable height.
+      // Guard against division by zero as per Palette's Journal.
+      const scrollHeight = document.documentElement.scrollHeight
+      const clientHeight = document.documentElement.clientHeight
+      const totalHeight = scrollHeight - clientHeight
+
       const progress = totalHeight > 0 ? window.scrollY / totalHeight : 0
-      setScrollProgress(progress)
+      // Ensure progress is between 0 and 1
+      setScrollProgress(Math.min(Math.max(progress, 0), 1))
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    // Initial calculation
+    handleScroll()
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <motion.div
       role="progressbar"
-      aria-label="Scroll progress"
+      aria-label="Page scroll progress"
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={Math.round(scrollProgress * 100)}
@@ -29,11 +37,6 @@ export function ScrollIndicator() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
-      role="progressbar"
-      aria-label="Page scroll progress"
-      aria-valuenow={Math.round(scrollProgress * 100)}
-      aria-valuemin={0}
-      aria-valuemax={100}
     />
   )
 }
