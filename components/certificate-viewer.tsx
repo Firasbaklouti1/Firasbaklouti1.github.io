@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Download, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
@@ -8,6 +9,8 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import { Spinner } from "@/components/ui/spinner"
+import { cn } from "@/lib/utils"
 
 interface CertificateViewerProps {
   isOpen: boolean
@@ -17,6 +20,14 @@ interface CertificateViewerProps {
 }
 
 export function CertificateViewer({ isOpen, onClose, pdfUrl, title }: CertificateViewerProps) {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsLoading(true)
+    }
+  }, [isOpen, pdfUrl])
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-4xl h-[85vh] p-0 flex flex-col gap-0 overflow-hidden">
@@ -41,11 +52,20 @@ export function CertificateViewer({ isOpen, onClose, pdfUrl, title }: Certificat
         </DialogHeader>
 
         {/* PDF Viewer */}
-        <div className="flex-1 bg-muted">
+        <div className="flex-1 bg-muted relative">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-muted z-10">
+              <Spinner className="h-8 w-8 text-purple-600" />
+            </div>
+          )}
           <iframe
             src={`${pdfUrl}#view=FitH`}
-            className="w-full h-full border-none"
+            className={cn(
+              "w-full h-full border-none transition-opacity duration-300",
+              isLoading ? "opacity-0" : "opacity-100"
+            )}
             title={title}
+            onLoad={() => setIsLoading(false)}
           />
         </div>
       </DialogContent>

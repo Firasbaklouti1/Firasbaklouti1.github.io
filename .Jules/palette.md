@@ -13,3 +13,7 @@
 ## 2025-05-18 - [Accessible Progress Indicators]
 **Learning:** Visual-only indicators like scroll progress bars are invisible to screen reader users unless they use appropriate ARIA roles and attributes. Providing `role="progressbar"` with `aria-valuenow` allows assistive technology to convey this information. Additionally, guarding against division by zero in progress calculations prevents `NaN` or `Infinity` from being exposed to the DOM.
 **Action:** Always add ARIA roles and attributes to custom visual indicators and include defensive logic to handle edge cases in calculations.
+
+## 2026-05-19 - [Asynchronous Content Loading in Dialogs]
+**Learning:** Displaying iframes in dialogs without loading feedback can lead to a "blank screen" effect, especially for large assets like PDFs. Using a `Spinner` with the `onLoad` event on the iframe provides immediate feedback and a smoother transition as content fades in.
+**Action:** Always implement loading states for asynchronous content like iframes to ensure a polished user experience.
