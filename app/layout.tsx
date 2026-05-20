@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Toaster } from "@/components/ui/toaster"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -28,8 +29,10 @@ export default function RootLayout({
           Skip to content
         </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
-          <Toaster />
+          <TooltipProvider>
+            {children}
+            <Toaster />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

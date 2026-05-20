@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Mail, ExternalLink, Download, ArrowDown } from "lucide-react"
+import { Github, Mail, ExternalLink, Download, ArrowDown, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
 import portfolioDataRaw from "@/public/data/portfolio.json"
@@ -14,6 +14,7 @@ export function HeroSection() {
   const { personalInfo, socialLinks } = portfolioData
   const upworkLink = socialLinks.find((l) => l.platform === "upwork")
   const githubLink = socialLinks.find((l) => l.platform === "github")
+  const linkedinLink = socialLinks.find((l) => l.platform === "linkedin")
   const stackoverflowLink = socialLinks.find((l) => l.platform === "stackoverflow")
 
   return (
@@ -87,6 +88,16 @@ export function HeroSection() {
                   aria-label="GitHub Profile"
                 >
                   <Github className="w-6 h-6" />
+                </Link>
+              )}
+              {linkedinLink && (
+                <Link
+                  href={linkedinLink.url}
+                  target="_blank"
+                  className="text-gray-600 hover:text-[#0077B5] dark:text-gray-400 dark:hover:text-[#0077B5] transition-colors transform hover:scale-110 duration-300"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="w-6 h-6" />
                 </Link>
               )}
               {stackoverflowLink && (
