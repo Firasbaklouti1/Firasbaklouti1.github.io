@@ -144,16 +144,7 @@ export function HeroSection() {
                   </TooltipContent>
                 </Tooltip>
               )}
-              {linkedinLink && (
-                <Link
-                  href={linkedinLink.url}
-                  target="_blank"
-                  className="text-gray-600 hover:text-[#0077B5] dark:text-gray-400 dark:hover:text-[#0077B5] transition-colors transform hover:scale-110 duration-300"
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </Link>
-              )}
+              
               {stackoverflowLink && (
                 <Tooltip>
                   <TooltipTrigger asChild>
