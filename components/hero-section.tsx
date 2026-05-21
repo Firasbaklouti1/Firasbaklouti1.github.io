@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Github, Mail, ExternalLink, Download, ArrowDown, FileText } from "lucide-react"
+import { Github, Mail, ExternalLink, Download, ArrowDown, FileText, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -10,8 +10,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Github, Mail, ExternalLink, Download, ArrowDown, Linkedin } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
 import portfolioDataRaw from "@/public/data/portfolio-en.json"
