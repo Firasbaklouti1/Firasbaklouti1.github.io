@@ -2,11 +2,17 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, FileText } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { motion, AnimatePresence } from "framer-motion"
-import portfolioDataRaw from "@/public/data/portfolio.json"
+import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData } from "@/types/portfolio"
 
 const portfolioData = portfolioDataRaw as unknown as PortfolioData
@@ -89,12 +95,28 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
-              <Button asChild variant="outline" size="sm" className="relative overflow-hidden group bg-transparent">
-                <Link href={personalInfo.resumeUrl} target="_blank" download>
-                  <span className="relative z-10">Download Resume</span>
-                  <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                </Link>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="relative overflow-hidden group bg-transparent">
+                    <span className="relative z-10">Download Resume</span>
+                    <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <a href="/documents/resume-en.pdf" download="Firas_Baklouti_Resume_EN.pdf" className="cursor-pointer flex items-center">
+                      <FileText className="mr-2 h-4 w-4" />
+                      <span>English Version</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/documents/resume-fr.pdf" download="Firas_Baklouti_Resume_FR.pdf" className="cursor-pointer flex items-center">
+                      <FileText className="mr-2 h-4 w-4" />
+                      <span>French Version</span>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <ThemeToggle />
             </motion.div>
           </div>

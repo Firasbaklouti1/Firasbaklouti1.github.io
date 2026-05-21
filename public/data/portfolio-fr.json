@@ -1,0 +1,262 @@
+{
+  "personalInfo": {
+    "name": "Firas B.",
+    "fullName": "Firas Baklouti",
+    "title": "Ingénieur Logiciel",
+    "location": "Bizerte, Tunisie",
+    "email": "firas@example.com",
+    "profileImage": "/images/profile.png",
+    "resumeUrl": "/documents/resume-fr.pdf",
+    "shortBio": "Spécialisé en Java (Spring Boot), automatisation/IA Python et React/Next.js pour la création d'applications fiables, évolutives et à l'architecture propre."
+  },
+  "navLinks": [
+    { "name": "À propos", "href": "#about" },
+    { "name": "Expérience", "href": "#experience" },
+    { "name": "Projets", "href": "#projects" },
+    { "name": "Compétences", "href": "#skills" },
+    { "name": "Certifications", "href": "#certifications" },
+    { "name": "Contact", "href": "#contact" }
+  ],
+  "socialLinks": [
+    {
+      "name": "Upwork",
+      "url": "https://www.upwork.com/freelancers/~01809538bb054905e6",
+      "platform": "upwork"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/Firasbaklouti1",
+      "platform": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/firas-baklouti-68baa72b0/",
+      "platform": "linkedin"
+    },
+    {
+      "name": "StackOverflow",
+      "url": "https://stackoverflow.com",
+      "platform": "stackoverflow"
+    }
+  ],
+  "about": {
+    "paragraphs": [
+      "Salut ! Je suis Firas — un ingénieur logiciel dévoué avec une solide expérience en Java (Spring Boot), automatisation/IA Python et React/Next.js pour construire des applications fiables, évolutives et proprement architecturées.",
+      "J'ai travaillé sur des systèmes complets incluant le backend, le frontend, des outils d'automatisation et des modules pilotés par l'IA. Je me concentre sur l'écriture d'un code propre et maintenable qui apporte une réelle valeur ajoutée.",
+      "Basé à Bizerte, en Tunisie, je poursuis actuellement mon diplôme d'ingénieur à l'Université Tunis Carthage (2024-2026) tout en développant une expérience pratique à travers le travail en freelance."
+    ],
+    "keyExpertise": [
+      "Développement Full-Stack avec Java Spring Boot & React/Next.js",
+      "Automatisation Python & Développement d'Agents IA",
+      "Machine Learning & Deep Learning",
+      "Conception & Intégration d'API REST",
+      "Docker, Git & Pratiques DevOps"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Étudiant Ingénieur Logiciel",
+      "company": "Faculté de Science de Bizerte",
+      "period": "Septembre 2023 - Présent",
+      "responsibilities": [
+        "Développement d'applications full-stack utilisant Java Spring Boot, Python et React/Next.js",
+        "Construction de modules pilotés par l'IA et d'outils d'automatisation pour divers projets",
+        "Travail sur les implémentations de machine learning et de deep learning"
+      ]
+    },
+    {
+      "title": "Ingénieur Logiciel Freelance",
+      "company": "Upwork",
+      "period": "2022 - Présent",
+      "responsibilities": [
+        "Construction d'applications web fiables et évolutives pour des clients internationaux",
+        "Spécialisation dans le développement Java, Python IA/automatisation et React/Next.js",
+        "Livraison d'un code propre et maintenable axé sur les résultats axés sur les solutions"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Détection de Sarcasme — Projet ML/NLP",
+      "description": "Machine Learning & Traitement du Langage Naturel",
+      "details": "Construction d'un modèle de machine learning pour détecter le sarcasme dans le texte en utilisant des techniques de NLP. Implémentation de divers algorithmes de classification et méthodes de traitement du langage naturel.",
+      "image": "/sarcasm-detection-nlp-machine-learning.png",
+      "link": "https://github.com/Firasbaklouti1/sarcasm-detection-machine-learning-project",
+      "tags": ["Machine Learning", "NLP", "Python", "Deep Learning"]
+    },
+    {
+      "title": "Site de Location de Voitures",
+      "description": "Application Web Full-Stack",
+      "details": "Développement d'une plateforme complète de location de voitures avec système de réservation, authentification des utilisateurs et tableau de bord administrateur pour la gestion de la flotte.",
+      "image": "/car-rental-website-modern-ui.png",
+      "link": "https://github.com/Firasbaklouti1/carRentalWebsite",
+      "tags": ["React", "JavaScript", "REST API", "Web Development"]
+    },
+    {
+      "title": "Urbanova — Plateforme de Vêtements Personnalisés",
+      "description": "Solution E-commerce Full-Stack",
+      "details": "Construction d'une plateforme e-commerce de vêtements personnalisés avec un backend Spring Boot et un frontend React. Les fonctionnalités incluent la personnalisation des produits, la gestion des commandes et l'intégration des paiements.",
+      "image": "/custom-apparel-ecommerce-platform.png",
+      "link": "https://urbanova.tn",
+      "tags": ["Spring Boot", "React", "Java", "REST API"]
+    },
+    {
+      "title": "Système de Gestion d'Auto-école",
+      "description": "Système de gestion complet pour une auto-école, construit avec Java, JavaFX et MySQL",
+      "details": "Système de gestion complet pour une auto-école, construit avec Java, JavaFX et MySQL. J'ai conçu l'architecture, implémenté la gestion des candidats, les paiements, les moniteurs, la planification et un tableau de bord financier. Le système comprend une structure de code en couches, des composants réutilisables et des opérations de base de données optimisées pour les flux de travail réels de l'entreprise.",
+      "image": "/driving-school-management-system.png",
+      "link": "https://github.com/Firasbaklouti1/Driving-School-Management-System",
+      "tags": ["Java", "JavaFX", "MySQL", "Desktop Application"]
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "title": "Développement Backend",
+        "shortTitle": "BE",
+        "color": "purple",
+        "styles": {
+          "iconBg": "bg-purple-100 dark:bg-purple-900",
+          "iconText": "text-purple-600 dark:text-purple-300",
+          "badgeHover": "hover:bg-purple-100 dark:hover:bg-purple-900/50"
+        },
+        "skills": ["Java", "Spring Boot", "Python", "REST API", "JavaFX", "Docker"]
+      },
+      {
+        "title": "Développement Frontend",
+        "shortTitle": "FE",
+        "color": "blue",
+        "styles": {
+          "iconBg": "bg-blue-100 dark:bg-blue-900",
+          "iconText": "text-blue-600 dark:text-blue-300",
+          "badgeHover": "hover:bg-blue-100 dark:hover:bg-blue-900/50"
+        },
+        "skills": ["React", "Next.js", "JavaScript", "TypeScript", "HTML/CSS", "Tailwind CSS"]
+      },
+      {
+        "title": "IA & Machine Learning",
+        "shortTitle": "AI",
+        "color": "green",
+        "styles": {
+          "iconBg": "bg-green-100 dark:bg-green-900",
+          "iconText": "text-green-600 dark:text-green-300",
+          "badgeHover": "hover:bg-green-100 dark:hover:bg-green-900/50"
+        },
+        "skills": ["Machine Learning", "Deep Learning", "Développement d'Agents IA", "NLP", "Automatisation", "Analyse de Données"]
+      },
+      {
+        "title": "Outils & DevOps",
+        "shortTitle": "OPS",
+        "color": "orange",
+        "styles": {
+          "iconBg": "bg-orange-100 dark:bg-orange-900",
+          "iconText": "text-orange-600 dark:text-orange-300",
+          "badgeHover": "hover:bg-orange-100 dark:hover:bg-orange-900/50"
+        },
+        "skills": ["Git", "GitHub", "Docker", "VS Code", "IntelliJ IDEA", "Postman"]
+      }
+    ],
+    "softSkills": [
+      {
+        "name": "Orienté Solutions",
+        "color": "purple",
+        "styles": {
+          "badge": "bg-purple-50 dark:bg-purple-900/20",
+          "border": "border-purple-200 dark:border-purple-800",
+          "hover": "hover:bg-purple-100 dark:hover:bg-purple-900/40"
+        }
+      },
+      {
+        "name": "Responsable des Résultats",
+        "color": "blue",
+        "styles": {
+          "badge": "bg-blue-50 dark:bg-blue-900/20",
+          "border": "border-blue-200 dark:border-blue-800",
+          "hover": "hover:bg-blue-100 dark:hover:bg-blue-900/40"
+        }
+      },
+      {
+        "name": "Arabe (Maternel)",
+        "color": "green",
+        "styles": {
+          "badge": "bg-green-50 dark:bg-green-900/20",
+          "border": "border-green-200 dark:border-green-800",
+          "hover": "hover:bg-green-100 dark:hover:bg-green-900/40"
+        }
+      },
+      {
+        "name": "Anglais (Conversationnel)",
+        "color": "yellow",
+        "styles": {
+          "badge": "bg-yellow-50 dark:bg-yellow-900/20",
+          "border": "border-yellow-200 dark:border-yellow-800",
+          "hover": "hover:bg-yellow-100 dark:hover:bg-yellow-900/40"
+        }
+      },
+      {
+        "name": "Français (Conversationnel)",
+        "color": "red",
+        "styles": {
+          "badge": "bg-red-50 dark:bg-red-900/20",
+          "border": "border-red-200 dark:border-red-800",
+          "hover": "hover:bg-red-100 dark:hover:bg-red-900/40"
+        }
+      }
+    ]
+  },
+  "education": {
+    "degrees": [
+      {
+        "title": "Diplôme d'Ingénieur",
+        "institution": "Université Tunis Carthage",
+        "period": "2024 - 2026 (Prévu)",
+        "description": "Poursuite actuelle d'un diplôme d'ingénieur avec un accent sur le génie logiciel, l'IA et le développement full-stack."
+      }
+    ],
+    "linkedAccounts": [
+      {
+        "name": "GitHub",
+        "description": "Actif depuis 2022 - Contrôle de version & contributions open source"
+      },
+      {
+        "name": "StackOverflow",
+        "description": "Participation communautaire & partage de connaissances"
+      }
+    ]
+  },
+  "certifications": [
+    {
+      "id": "stat-python-1",
+      "number": "#43,988,459",
+      "title": "Statistical Thinking in Python (Partie 1)",
+      "issuer": "DataCamp",
+      "duration": "3 Heures",
+      "completedDate": "26 Octobre 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Cours terminé avec succès couvrant les concepts statistiques fondamentaux et leur implémentation en Python.",
+      "pdfUrl": "/documents/certificates/statistical-thinking-python-1.pdf"
+    },
+    {
+      "id": "stat-python-2",
+      "number": "#43,988,764",
+      "title": "Statistical Thinking in Python (Partie 2)",
+      "issuer": "DataCamp",
+      "duration": "4 Heures",
+      "completedDate": "26 Octobre 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Concepts avancés de pensée statistique, y compris les tests d'hypothèses et l'analyse bootstrap en Python.",
+      "pdfUrl": "/documents/certificates/statistical-thinking-python-2.pdf"
+    },
+    {
+      "id": "case-studies",
+      "number": "#43,989,028",
+      "title": "Études de Cas en Pensée Statistique",
+      "issuer": "DataCamp",
+      "duration": "4 Heures",
+      "completedDate": "26 Octobre 2025",
+      "issuedBy": "Jonathan Cornelissen, CEO",
+      "description": "Études de cas réelles appliquant la pensée statistique pour analyser des données et tirer des conclusions significatives.",
+      "pdfUrl": "/documents/certificates/case-studies-statistical-thinking.pdf"
+    }
+  ]
+}

@@ -2,11 +2,19 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { Github, Mail, ExternalLink, Download, ArrowDown, FileText } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { Github, Mail, ExternalLink, Download, ArrowDown, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
-import portfolioDataRaw from "@/public/data/portfolio.json"
+import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData } from "@/types/portfolio"
 
 const portfolioData = portfolioDataRaw as unknown as PortfolioData
@@ -57,13 +65,29 @@ export function HeroSection() {
                   <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                 </Link>
               </Button>
-              <Button variant="secondary" asChild className="relative overflow-hidden group">
-                <a href={personalInfo.resumeUrl} download="firas-resume.pdf">
-                  <Download className="w-4 h-4 mr-2" />
-                  <span className="relative z-10">Resume</span>
-                  <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
-                </a>
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="secondary" className="relative overflow-hidden group">
+                    <Download className="w-4 h-4 mr-2" />
+                    <span className="relative z-10">Resume</span>
+                    <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild>
+                    <a href="/documents/resume-en.pdf" download="Firas_Baklouti_Resume_EN.pdf" className="cursor-pointer flex items-center">
+                      <FileText className="mr-2 h-4 w-4" />
+                      <span>English Version</span>
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/documents/resume-fr.pdf" download="Firas_Baklouti_Resume_FR.pdf" className="cursor-pointer flex items-center">
+                      <FileText className="mr-2 h-4 w-4" />
+                      <span>French Version</span>
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </ClientMotion>
             <ClientMotion
               className="flex gap-4 pt-2"
