@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Github, ExternalLink, ChevronRight } from "lucide-react"
+import { Github, ExternalLink, ChevronRight, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -308,7 +308,7 @@ export default function Home() {
                   )}
                   {linkedinLink && (
                     <div className="flex items-center hover:translate-x-1 transition-transform duration-300">
-                      <ExternalLink className="w-5 h-5 text-purple-600 mr-3" />
+                      <Linkedin className="w-5 h-5 text-purple-600 mr-3" />
                       <a
                         href={linkedinLink.url}
                         target="_blank"
@@ -376,7 +376,7 @@ export default function Home() {
                   className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
                   aria-label={linkedinLink.name}
                 >
-                  <ExternalLink className="w-5 h-5" />
+                  <Linkedin className="w-5 h-5" />
                 </Link>
               )}
             </div>

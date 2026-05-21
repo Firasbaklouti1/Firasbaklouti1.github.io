@@ -10,6 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { Github, Mail, ExternalLink, Download, ArrowDown, Linkedin } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { AnimatedText, ClientMotion } from "@/components/client-animations"
 import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData } from "@/types/portfolio"
@@ -20,6 +23,7 @@ export function HeroSection() {
   const { personalInfo, socialLinks } = portfolioData
   const upworkLink = socialLinks.find((l) => l.platform === "upwork")
   const githubLink = socialLinks.find((l) => l.platform === "github")
+  const linkedinLink = socialLinks.find((l) => l.platform === "linkedin")
   const stackoverflowLink = socialLinks.find((l) => l.platform === "stackoverflow")
 
   return (
@@ -92,42 +96,97 @@ export function HeroSection() {
               transition={{ delay: 1, duration: 0.8 }}
             >
               {upworkLink && (
-                <Link
-                  href={upworkLink.url}
-                  target="_blank"
-                  className="text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors transform hover:scale-110 duration-300"
-                  aria-label="Upwork Profile"
-                >
-                  <ExternalLink className="w-6 h-6" />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={upworkLink.url}
+                      target="_blank"
+                      className="text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors transform hover:scale-110 duration-300"
+                      aria-label="Upwork Profile"
+                    >
+                      <ExternalLink className="w-6 h-6" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Upwork Profile</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
               {githubLink && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={githubLink.url}
+                      target="_blank"
+                      className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      aria-label="GitHub Profile"
+                    >
+                      <Github className="w-6 h-6" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>GitHub Profile</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
+              {linkedinLink && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={linkedinLink.url}
+                      target="_blank"
+                      className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300"
+                      aria-label="LinkedIn Profile"
+                    >
+                      <Linkedin className="w-6 h-6" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>LinkedIn Profile</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
+              {linkedinLink && (
                 <Link
-                  href={githubLink.url}
+                  href={linkedinLink.url}
                   target="_blank"
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
-                  aria-label="GitHub Profile"
+                  className="text-gray-600 hover:text-[#0077B5] dark:text-gray-400 dark:hover:text-[#0077B5] transition-colors transform hover:scale-110 duration-300"
+                  aria-label="LinkedIn Profile"
                 >
-                  <Github className="w-6 h-6" />
+                  <Linkedin className="w-6 h-6" />
                 </Link>
               )}
               {stackoverflowLink && (
-                <Link
-                  href={stackoverflowLink.url}
-                  target="_blank"
-                  className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors transform hover:scale-110 duration-300"
-                  aria-label="StackOverflow Profile"
-                >
-                  <ExternalLink className="w-6 h-6" />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={stackoverflowLink.url}
+                      target="_blank"
+                      className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors transform hover:scale-110 duration-300"
+                      aria-label="StackOverflow Profile"
+                    >
+                      <ExternalLink className="w-6 h-6" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>StackOverflow Profile</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
-              <Link
-                href={`mailto:${personalInfo.email}`}
-                className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110 duration-300"
-                aria-label="Email"
-              >
-                <Mail className="w-6 h-6" />
-              </Link>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={`mailto:${personalInfo.email}`}
+                    className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110 duration-300"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-6 h-6" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Email Me</p>
+                </TooltipContent>
+              </Tooltip>
             </ClientMotion>
           </div>
           <ClientMotion
