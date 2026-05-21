@@ -16,7 +16,7 @@ import {
   AnimatedGradientBackground,
 } from "@/components/client-animations"
 import { CertificationsSection } from "@/components/certifications-section"
-import portfolioDataRaw from "@/public/data/portfolio.json"
+import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData } from "@/types/portfolio"
 
 const portfolioData = portfolioDataRaw as unknown as PortfolioData

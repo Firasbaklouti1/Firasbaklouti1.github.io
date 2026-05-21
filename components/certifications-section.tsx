@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { AnimatedSection, AnimatedCard } from "@/components/client-animations"
 import { CertificateViewer } from "@/components/certificate-viewer"
-import portfolioDataRaw from "@/public/data/portfolio.json"
+import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData, Certification } from "@/types/portfolio"
 
 const portfolioData = portfolioDataRaw as unknown as PortfolioData

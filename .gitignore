@@ -32,3 +32,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+resume-*.pdf
+dev_server.log
