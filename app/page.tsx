@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Github, ExternalLink, ChevronRight, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ContactForm } from "@/components/contact-form"
@@ -350,34 +351,55 @@ export default function Home() {
             </div>
             <div className="flex space-x-4">
               {upworkLink && (
-                <Link
-                  href={upworkLink.url}
-                  target="_blank"
-                  className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-                  aria-label={upworkLink.name}
-                >
-                  <ExternalLink className="w-5 h-5" />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={upworkLink.url}
+                      target="_blank"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      aria-label={`${upworkLink.name} Profile`}
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{upworkLink.name} Profile</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
               {githubLink && (
-                <Link
-                  href={githubLink.url}
-                  target="_blank"
-                  className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-                  aria-label={githubLink.name}
-                >
-                  <Github className="w-5 h-5" />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={githubLink.url}
+                      target="_blank"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      aria-label={`${githubLink.name} Profile`}
+                    >
+                      <Github className="w-5 h-5" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{githubLink.name} Profile</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
               {linkedinLink && (
-                <Link
-                  href={linkedinLink.url}
-                  target="_blank"
-                  className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
-                  aria-label={linkedinLink.name}
-                >
-                  <Linkedin className="w-5 h-5" />
-                </Link>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href={linkedinLink.url}
+                      target="_blank"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      aria-label={`${linkedinLink.name} Profile`}
+                    >
+                      <Linkedin className="w-5 h-5" />
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{linkedinLink.name} Profile</p>
+                  </TooltipContent>
+                </Tooltip>
               )}
             </div>
           </div>
