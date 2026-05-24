@@ -44,7 +44,7 @@ export default function Home() {
       <HeroSection />
 
         {/* About Section - Updated bio for Firas */}
-      <section id="about" className="py-16 px-4 bg-white dark:bg-gray-800 relative overflow-hidden">
+      <section id="about" tabIndex={-1} className="py-16 px-4 bg-white dark:bg-gray-800 relative overflow-hidden outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
@@ -79,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section - Updated for Firas */}
-      <section id="experience" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
+      <section id="experience" tabIndex={-1} className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Professional Experience</h2>
@@ -109,7 +109,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section - Updated for Firas's projects */}
-      <section id="projects" className="py-16 px-4 bg-white dark:bg-gray-800 relative">
+      <section id="projects" tabIndex={-1} className="py-16 px-4 bg-white dark:bg-gray-800 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
@@ -168,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section - Updated for Firas's skills */}
-      <section id="skills" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
+      <section id="skills" tabIndex={-1} className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
@@ -225,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* Education Section - Updated for Firas */}
-      <section id="education" className="py-16 px-4 bg-white dark:bg-gray-800 relative">
+      <section id="education" tabIndex={-1} className="py-16 px-4 bg-white dark:bg-gray-800 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
@@ -270,7 +270,7 @@ export default function Home() {
       <CertificationsSection />
 
       {/* Contact Section - Updated for Firas */}
-      <section id="contact" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
+      <section id="contact" tabIndex={-1} className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
