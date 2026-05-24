@@ -135,7 +135,11 @@ export function ContactForm() {
           <Label htmlFor="message">
             Message <span className="text-destructive">*</span>
           </Label>
-          <span className={`text-xs ${formData.message.length > MAX_MESSAGE_LENGTH ? "text-destructive" : "text-muted-foreground"}`}>
+          <span
+            id="message-count"
+            aria-live="polite"
+            className={`text-xs ${formData.message.length > MAX_MESSAGE_LENGTH ? "text-destructive" : "text-muted-foreground"}`}
+          >
             {formData.message.length}/{MAX_MESSAGE_LENGTH}
           </span>
         </div>
@@ -148,6 +152,7 @@ export function ContactForm() {
             onChange={handleChange}
             required
             className="focus-visible:ring-purple-600"
+            aria-describedby="message-count"
           />
         </motion.div>
       </div>
