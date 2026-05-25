@@ -14,13 +14,19 @@ export function SmoothScroll() {
         const targetId = anchor.getAttribute("href")
 
         if (targetId && targetId !== "#") {
-          const targetElement = document.querySelector(targetId)
+          const targetElement = document.querySelector(targetId) as HTMLElement
 
           if (targetElement) {
             window.scrollTo({
               top: targetElement.getBoundingClientRect().top + window.scrollY - 80, // Offset for navbar
               behavior: "smooth",
             })
+
+            // Programmatically focus the target element after the scroll
+            // We use a small timeout to allow the smooth scroll to start/finish
+            setTimeout(() => {
+              targetElement.focus({ preventScroll: true })
+            }, 800)
           }
         }
       }

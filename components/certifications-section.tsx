@@ -17,7 +17,7 @@ export function CertificationsSection() {
 
   return (
     <>
-      <section id="certifications" className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative">
+      <section id="certifications" tabIndex={-1} className="py-16 px-4 bg-gray-50 dark:bg-gray-900 relative outline-none">
         <div className="container mx-auto max-w-6xl relative z-10">
           <AnimatedSection>
             <h2 className="text-3xl font-bold mb-8 text-center">Certifications</h2>

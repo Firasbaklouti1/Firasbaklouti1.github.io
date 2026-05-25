@@ -205,6 +205,7 @@ export function HeroSection() {
           <Link
             href="#about"
             className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            aria-label="Scroll to About section"
           >
             <ArrowDown className="w-6 h-6" />
           </Link>
