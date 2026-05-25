@@ -21,6 +21,15 @@ export function SmoothScroll() {
               top: targetElement.getBoundingClientRect().top + window.scrollY - 80, // Offset for navbar
               behavior: "smooth",
             })
+
+            // Set focus to the target element for better accessibility
+            // Use setTimeout to ensure the scroll has started/finished in some browsers
+            // and doesn't interrupt the smooth scroll animation
+            setTimeout(() => {
+              if (targetElement instanceof HTMLElement) {
+                targetElement.focus({ preventScroll: true })
+              }
+            }, 800)
           }
         }
       }
