@@ -14,6 +14,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion"
 import portfolioDataRaw from "@/public/data/portfolio-en.json"
 import { PortfolioData } from "@/types/portfolio"
+import { cn } from "@/lib/utils"
 
 const portfolioData = portfolioDataRaw as unknown as PortfolioData
 
@@ -61,15 +62,44 @@ export function Navbar() {
     }
   }, [navLinks])
 
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-40% 0px -40% 0px",
+      threshold: 0,
+    }
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+    navLinks.forEach((link) => {
+      const sectionId = link.href.startsWith("#") ? link.href.substring(1) : null
+      if (sectionId) {
+        const element = document.getElementById(sectionId)
+        if (element) observer.observe(element)
+      }
+    })
+
+    return () => observer.disconnect()
+  }, [navLinks])
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm" : "bg-transparent"
-      }`}
+      )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
