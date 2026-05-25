@@ -14,7 +14,7 @@ export function SmoothScroll() {
         const targetId = anchor.getAttribute("href")
 
         if (targetId && targetId !== "#") {
-          const targetElement = document.querySelector(targetId)
+          const targetElement = document.querySelector(targetId) as HTMLElement
 
           if (targetElement) {
             window.scrollTo({
@@ -22,13 +22,10 @@ export function SmoothScroll() {
               behavior: "smooth",
             })
 
-            // Set focus to the target element for better accessibility
-            // Use setTimeout to ensure the scroll has started/finished in some browsers
-            // and doesn't interrupt the smooth scroll animation
+            // Programmatically focus the target element after the scroll
+            // We use a small timeout to allow the smooth scroll to start/finish
             setTimeout(() => {
-              if (targetElement instanceof HTMLElement) {
-                targetElement.focus({ preventScroll: true })
-              }
+              targetElement.focus({ preventScroll: true })
             }, 800)
           }
         }
