@@ -10,10 +10,12 @@ import { Spinner } from "@/components/ui/spinner"
 import { sendContactEmail } from "@/app/actions"
 import { useToast } from "@/hooks/use-toast"
 import { motion, AnimatePresence } from "framer-motion"
+import { CheckCircle2 } from "lucide-react"
 
 export function ContactForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,6 +44,7 @@ export function ContactForm() {
           variant: "default",
         })
 
+        setIsSubmitted(true)
         // Reset form
         setFormData({
           name: "",
@@ -70,6 +73,27 @@ export function ContactForm() {
   const inputVariants = {
     focus: { scale: 1.02, transition: { duration: 0.2 } },
     blur: { scale: 1, transition: { duration: 0.2 } },
+  }
+
+  if (isSubmitted) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="text-center py-8 space-y-4"
+      >
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-16 h-16 text-purple-600" />
+        </div>
+        <h3 className="text-2xl font-bold">Message Sent!</h3>
+        <p className="text-gray-600 dark:text-gray-400">
+          Thank you for reaching out. I&apos;ve received your message and will get back to you as soon as possible.
+        </p>
+        <Button onClick={() => setIsSubmitted(false)} variant="outline" className="mt-4">
+          Send Another Message
+        </Button>
+      </motion.div>
+    )
   }
 
   return (
@@ -151,6 +175,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             required
+            maxLength={MAX_MESSAGE_LENGTH}
             className="focus-visible:ring-purple-600"
             aria-describedby="message-count"
           />

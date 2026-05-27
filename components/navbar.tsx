@@ -114,7 +114,7 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-sm outline-none"
             >
               {personalInfo.name}
             </Link>
