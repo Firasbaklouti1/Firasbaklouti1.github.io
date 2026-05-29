@@ -14,6 +14,10 @@
 **Learning:** Visual-only indicators like scroll progress bars are invisible to screen reader users unless they use appropriate ARIA roles and attributes. Providing `role="progressbar"` with `aria-valuenow` allows assistive technology to convey this information. Additionally, guarding against division by zero in progress calculations prevents `NaN` or `Infinity` from being exposed to the DOM.
 **Action:** Always add ARIA roles and attributes to custom visual indicators and include defensive logic to handle edge cases in calculations.
 
-## 2026-05-19 - [Asynchronous Content Loading in Dialogs]
+## 2025-05-19 - [Asynchronous Content Loading in Dialogs]
 **Learning:** Displaying iframes in dialogs without loading feedback can lead to a "blank screen" effect, especially for large assets like PDFs. Using a `Spinner` with the `onLoad` event on the iframe provides immediate feedback and a smoother transition as content fades in.
 **Action:** Always implement loading states for asynchronous content like iframes to ensure a polished user experience.
+
+## 2025-05-20 - [Framer Motion Path Drawing Animations]
+**Learning:** For SVG path drawing animations to work correctly with `framer-motion`, the `pathLength`, `initial`, and `animate` props must be applied directly to the `motion.path` or `motion.polyline` elements. Applying them to the parent `motion.svg` container does not trigger the expected path length calculation and prevents the drawing effect.
+**Action:** Always target the specific path-based elements within an SVG when implementing drawing animations to ensure correct visual execution.
