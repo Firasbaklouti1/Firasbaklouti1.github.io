@@ -1,4 +1,5 @@
 import { z } from "zod"
+import { MAX_MESSAGE_LENGTH } from "@/lib/constants"
 
 // Form validation schema
 const formSchema = z.object({
@@ -8,7 +9,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." })
-    .max(1000, { message: "Message must be at most 1000 characters." }),
+    .max(MAX_MESSAGE_LENGTH, { message: `Message must be at most ${MAX_MESSAGE_LENGTH} characters.` }),
 })
 
 type FormData = z.infer<typeof formSchema>

@@ -12,6 +12,7 @@ import { sendContactEmail } from "@/app/actions"
 import { useToast } from "@/hooks/use-toast"
 import { motion, AnimatePresence } from "framer-motion"
 import { CheckCircle2 } from "lucide-react"
+import { MAX_MESSAGE_LENGTH } from "@/lib/constants"
 
 export function ContactForm() {
   const { toast } = useToast()
@@ -28,8 +29,6 @@ export function ContactForm() {
     const { id, value } = e.target
     setFormData((prev) => ({ ...prev, [id]: value }))
   }
-
-  const MAX_MESSAGE_LENGTH = 1000
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -77,64 +76,29 @@ export function ContactForm() {
     blur: { scale: 1, transition: { duration: 0.2 } },
   }
 
-  if (isSubmitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="text-center py-8 space-y-4"
-      >
-        <div className="flex justify-center">
-          <CheckCircle2 className="w-16 h-16 text-purple-600" />
-        </div>
-        <h3 className="text-2xl font-bold">Message Sent!</h3>
-        <p className="text-gray-600 dark:text-gray-400">
-          Thank you for reaching out. I&apos;ve received your message and will get back to you as soon as possible.
-        </p>
-        <Button onClick={() => setIsSubmitted(false)} variant="outline" className="mt-4">
-          Send Another Message
-        </Button>
-      </motion.div>
-    )
-  }
-
   return (
     <AnimatePresence mode="wait">
       {isSubmitted ? (
         <motion.div
           key="success"
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
+          exit={{ opacity: 0, scale: 0.95 }}
           className="flex flex-col items-center justify-center py-12 text-center"
         >
-          <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-purple-600 dark:text-purple-400"
-            >
-              <motion.polyline
-                points="20 6 9 17 4 12"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              />
-            </svg>
+          <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-6">
+            <CheckCircle2 className="w-8 h-8 text-green-600 dark:text-green-400" />
           </div>
           <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-          <p className="text-muted-foreground mb-6 max-w-xs">
+          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xs">
             Thank you for reaching out. I&apos;ll get back to you as soon as possible.
           </p>
-          <Button variant="outline" onClick={() => setIsSubmitted(false)}>
-            Send Another Message
+          <Button
+            onClick={() => setIsSubmitted(false)}
+            variant="outline"
+            className="focus-visible:ring-purple-600"
+          >
+            Send another message
           </Button>
         </motion.div>
       ) : (
@@ -218,6 +182,7 @@ export function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                maxLength={MAX_MESSAGE_LENGTH}
                 className="focus-visible:ring-purple-600"
                 aria-describedby="message-count"
               />
