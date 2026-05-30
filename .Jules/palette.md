@@ -17,3 +17,7 @@
 ## 2026-05-19 - [Asynchronous Content Loading in Dialogs]
 **Learning:** Displaying iframes in dialogs without loading feedback can lead to a "blank screen" effect, especially for large assets like PDFs. Using a `Spinner` with the `onLoad` event on the iframe provides immediate feedback and a smoother transition as content fades in.
 **Action:** Always implement loading states for asynchronous content like iframes to ensure a polished user experience.
+
+## 2025-05-20 - [Post-Submission Interaction States]
+**Learning:** For forms in single-page applications, relying solely on ephemeral feedback like toasts can be insufficient for important actions. Replacing the form with a persistent success state (e.g., "Message Sent!") provides a clear, unambiguous terminal state and reduces cognitive load by removing now-unnecessary inputs.
+**Action:** Implement terminal success states for primary conversion forms to confirm completion and provide clear follow-up actions (e.g., "Send another message").
