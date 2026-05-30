@@ -11,7 +11,6 @@ import { Spinner } from "@/components/ui/spinner"
 import { sendContactEmail } from "@/app/actions"
 import { useToast } from "@/hooks/use-toast"
 import { motion, AnimatePresence } from "framer-motion"
-import { CheckCircle2 } from "lucide-react"
 import { MAX_MESSAGE_LENGTH } from "@/lib/constants"
 
 export function ContactForm() {
