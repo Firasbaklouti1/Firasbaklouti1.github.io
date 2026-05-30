@@ -99,7 +99,7 @@ export function HeroSection() {
                     <Link
                       href={upworkLink.url}
                       target="_blank"
-                      className="text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="Upwork Profile"
                     >
                       <ExternalLink className="w-6 h-6" />
@@ -116,7 +116,7 @@ export function HeroSection() {
                     <Link
                       href={githubLink.url}
                       target="_blank"
-                      className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="GitHub Profile"
                     >
                       <Github className="w-6 h-6" />
@@ -133,7 +133,7 @@ export function HeroSection() {
                     <Link
                       href={linkedinLink.url}
                       target="_blank"
-                      className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="LinkedIn Profile"
                     >
                       <Linkedin className="w-6 h-6" />
@@ -151,7 +151,7 @@ export function HeroSection() {
                     <Link
                       href={stackoverflowLink.url}
                       target="_blank"
-                      className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="StackOverflow Profile"
                     >
                       <ExternalLink className="w-6 h-6" />
@@ -166,7 +166,7 @@ export function HeroSection() {
                 <TooltipTrigger asChild>
                   <Link
                     href={`mailto:${personalInfo.email}`}
-                    className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110 duration-300"
+                    className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                     aria-label="Email"
                   >
                     <Mail className="w-6 h-6" />
@@ -204,7 +204,7 @@ export function HeroSection() {
         >
           <Link
             href="#about"
-            className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+            className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
             aria-label="Scroll to About section"
           >
             <ArrowDown className="w-6 h-6" />

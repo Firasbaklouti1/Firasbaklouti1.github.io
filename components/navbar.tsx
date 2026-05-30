@@ -114,7 +114,7 @@ export function Navbar() {
           >
             <Link
               href="/"
-              className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-sm outline-none"
             >
               {personalInfo.name}
             </Link>
@@ -246,6 +246,43 @@ export function Navbar() {
                   </motion.div>
                 )
               })}
+              <div className="pt-4 pb-2 border-t border-gray-100 dark:border-gray-800">
+                <p className="px-3 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                  Resume
+                </p>
+                <div className="grid grid-cols-1 gap-1">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * navLinks.length }}
+                  >
+                    <a
+                      href="/documents/resume-en.pdf"
+                      download="Firas_Baklouti_Resume_EN.pdf"
+                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <FileText className="mr-3 h-5 w-5 text-purple-600" />
+                      <span>English Version</span>
+                    </a>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * (navLinks.length + 1) }}
+                  >
+                    <a
+                      href="/documents/resume-fr.pdf"
+                      download="Firas_Baklouti_Resume_FR.pdf"
+                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <FileText className="mr-3 h-5 w-5 text-purple-600" />
+                      <span>French Version</span>
+                    </a>
+                  </motion.div>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

@@ -21,3 +21,6 @@
 ## 2025-05-20 - [Framer Motion Path Drawing Animations]
 **Learning:** For SVG path drawing animations to work correctly with `framer-motion`, the `pathLength`, `initial`, and `animate` props must be applied directly to the `motion.path` or `motion.polyline` elements. Applying them to the parent `motion.svg` container does not trigger the expected path length calculation and prevents the drawing effect.
 **Action:** Always target the specific path-based elements within an SVG when implementing drawing animations to ensure correct visual execution.
+## 2025-05-20 - [Post-Submission Interaction States]
+**Learning:** For forms in single-page applications, relying solely on ephemeral feedback like toasts can be insufficient for important actions. Replacing the form with a persistent success state (e.g., "Message Sent!") provides a clear, unambiguous terminal state and reduces cognitive load by removing now-unnecessary inputs.
+**Action:** Implement terminal success states for primary conversion forms to confirm completion and provide clear follow-up actions (e.g., "Send another message").
