@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -52,6 +53,7 @@ export function ContactForm() {
           subject: "",
           message: "",
         })
+        setIsSubmitted(true)
       } else {
         toast({
           title: "Error",
@@ -97,14 +99,42 @@ export function ContactForm() {
   }
 
   return (
-    <motion.form
-      className="space-y-4"
-      onSubmit={handleSubmit}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <AnimatePresence mode="wait">
+      {isSubmitted ? (
+        <motion.div
+          key="success"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          className="text-center py-8 space-y-4"
+        >
+          <div className="flex justify-center">
+            <div className="rounded-full bg-green-100 dark:bg-green-900/30 p-3">
+              <CheckCircle2 className="h-12 w-12 text-green-600 dark:text-green-400" />
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold">Message Sent!</h3>
+          <p className="text-gray-600 dark:text-gray-400 max-w-sm mx-auto">
+            Thank you for reaching out. I&apos;ve received your message and will get back to you as soon as possible.
+          </p>
+          <div className="pt-4">
+            <Button variant="outline" onClick={() => setIsSubmitted(false)} className="relative overflow-hidden group">
+              <span className="relative z-10">Send another message</span>
+              <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
+            </Button>
+          </div>
+        </motion.div>
+      ) : (
+        <motion.form
+          key="form"
+          className="space-y-4"
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="name">
             Name <span className="text-destructive">*</span>
@@ -211,5 +241,7 @@ export function ContactForm() {
         </Button>
       </motion.div>
     </motion.form>
+  )}
+</AnimatePresence>
   )
 }

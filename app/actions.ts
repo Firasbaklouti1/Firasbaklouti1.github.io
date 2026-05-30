@@ -8,7 +8,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters." })
-    .max(1000, { message: "Message must not exceed 1000 characters." }),
+    .max(1000, { message: "Message must be at most 1000 characters." }),
 })
 
 type FormData = z.infer<typeof formSchema>
