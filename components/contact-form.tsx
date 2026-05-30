@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import { CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -51,6 +52,7 @@ export function ContactForm() {
           subject: "",
           message: "",
         })
+        setIsSubmitted(true)
       } else {
         toast({
           title: "Error",

@@ -356,7 +356,7 @@ export default function Home() {
                     <Link
                       href={upworkLink.url}
                       target="_blank"
-                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${upworkLink.name} Profile`}
                     >
                       <ExternalLink className="w-5 h-5" />
@@ -373,7 +373,7 @@ export default function Home() {
                     <Link
                       href={githubLink.url}
                       target="_blank"
-                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${githubLink.name} Profile`}
                     >
                       <Github className="w-5 h-5" />
@@ -390,7 +390,7 @@ export default function Home() {
                     <Link
                       href={linkedinLink.url}
                       target="_blank"
-                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300"
+                      className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${linkedinLink.name} Profile`}
                     >
                       <Linkedin className="w-5 h-5" />
