@@ -36,23 +36,13 @@ export function CertificateViewer({ isOpen, onClose, pdfUrl, title }: Certificat
             {title}
           </DialogTitle>
           <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-              aria-label={`Open ${title} in new tab`}
-            >
+            <Button variant="outline" size="sm" asChild aria-label="Open certificate in new tab">
               <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Open</span>
               </a>
             </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              asChild
-              aria-label={`Download ${title}`}
-            >
+            <Button variant="outline" size="sm" asChild aria-label="Download certificate">
               <a href={pdfUrl} download>
                 <Download className="w-4 h-4 sm:mr-2" />
                 <span className="hidden sm:inline">Download</span>
