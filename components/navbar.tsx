@@ -172,13 +172,21 @@ export function Navbar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem asChild>
-                    <a href="/documents/resume-en.pdf" download="Firas_Baklouti_Resume_EN.pdf" className="cursor-pointer flex items-center">
+                    <a
+                      href="/documents/resume-en.pdf"
+                      download="Firas_Baklouti_Resume_EN.pdf"
+                      className="cursor-pointer flex items-center focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none rounded-sm"
+                    >
                       <FileText className="mr-2 h-4 w-4" />
                       <span>English Version</span>
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="/documents/resume-fr.pdf" download="Firas_Baklouti_Resume_FR.pdf" className="cursor-pointer flex items-center">
+                    <a
+                      href="/documents/resume-fr.pdf"
+                      download="Firas_Baklouti_Resume_FR.pdf"
+                      className="cursor-pointer flex items-center focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none rounded-sm"
+                    >
                       <FileText className="mr-2 h-4 w-4" />
                       <span>French Version</span>
                     </a>
@@ -233,7 +241,7 @@ export function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none ${
                         isActive
                           ? "text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20"
                           : "text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400"
@@ -259,7 +267,7 @@ export function Navbar() {
                     <a
                       href="/documents/resume-en.pdf"
                       download="Firas_Baklouti_Resume_EN.pdf"
-                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
+                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none"
                       onClick={() => setIsOpen(false)}
                     >
                       <FileText className="mr-3 h-5 w-5 text-purple-600" />
@@ -274,7 +282,7 @@ export function Navbar() {
                     <a
                       href="/documents/resume-fr.pdf"
                       download="Firas_Baklouti_Resume_FR.pdf"
-                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
+                      className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none"
                       onClick={() => setIsOpen(false)}
                     >
                       <FileText className="mr-3 h-5 w-5 text-purple-600" />

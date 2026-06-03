@@ -32,20 +32,30 @@ export function CertificateViewer({ isOpen, onClose, pdfUrl, title }: Certificat
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-4xl h-[85vh] p-0 flex flex-col gap-0 overflow-hidden">
         <DialogHeader className="p-4 border-b flex-row items-center justify-between space-y-0 pr-12">
-          <DialogTitle className="text-lg font-semibold truncate">
+          <DialogTitle className="text-lg font-semibold truncate mr-4">
             {title}
           </DialogTitle>
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" asChild className="hidden sm:flex">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              aria-label="Open certificate in new tab"
+            >
               <a href={pdfUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Open
+                <ExternalLink className="w-4 h-4 sm:mr-2" />
+                <span className="hidden sm:inline">Open</span>
               </a>
             </Button>
-            <Button variant="outline" size="sm" asChild className="hidden sm:flex">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              aria-label="Download certificate"
+            >
               <a href={pdfUrl} download>
-                <Download className="w-4 h-4 mr-2" />
-                Download
+                <Download className="w-4 h-4 sm:mr-2" />
+                <span className="hidden sm:inline">Download</span>
               </a>
             </Button>
           </div>
