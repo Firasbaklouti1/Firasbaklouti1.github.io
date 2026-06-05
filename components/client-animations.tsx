@@ -16,4 +16,7 @@ export const AnimatedGradientBackground = dynamic(
   () => import("@/components/ui/animated-gradient-background").then((mod) => mod.AnimatedGradientBackground),
   { ssr: false },
 )
+export const ScrollToTop = dynamic(() => import("@/components/scroll-to-top").then((mod) => mod.ScrollToTop), {
+  ssr: false,
+})
 export const ClientMotion = dynamic(() => import("framer-motion").then((mod) => mod.motion.div), { ssr: false })
