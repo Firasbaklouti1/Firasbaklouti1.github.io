@@ -8,6 +8,7 @@ export const AnimatedSection = dynamic(() => import("@/components/animated-secti
   ssr: false,
 })
 export const AnimatedCard = dynamic(() => import("@/components/animated-card").then((mod) => mod.AnimatedCard), { ssr: false })
+export const ScrollToTop = dynamic(() => import("@/components/scroll-to-top").then((mod) => mod.ScrollToTop), { ssr: false })
 export const ParticleBackground = dynamic(
   () => import("@/components/particle-background").then((mod) => mod.ParticleBackground),
   { ssr: false },
