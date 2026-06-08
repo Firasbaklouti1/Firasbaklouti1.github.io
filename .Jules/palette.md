@@ -24,3 +24,7 @@
 ## 2025-05-20 - [Post-Submission Interaction States]
 **Learning:** For forms in single-page applications, relying solely on ephemeral feedback like toasts can be insufficient for important actions. Replacing the form with a persistent success state (e.g., "Message Sent!") provides a clear, unambiguous terminal state and reduces cognitive load by removing now-unnecessary inputs.
 **Action:** Implement terminal success states for primary conversion forms to confirm completion and provide clear follow-up actions (e.g., "Send another message").
+
+## 2025-05-21 - [Binary Asset Hygiene & Build Artifacts]
+**Learning:** In projects that dynamically generate assets (like PDFs) during build/dev, build scripts can pollute the version control status with binary changes. Blindly committing these changes can lead to large, unnecessary PRs. Additionally, keeping UX components focused and under a line limit (e.g., 50 lines) ensures they remain manageable and don't overreach.
+**Action:** Always verify `git status` before submission and restore any unintended binary modifications. Refactor components to maintain a tight, single-responsibility focus within line limits.
