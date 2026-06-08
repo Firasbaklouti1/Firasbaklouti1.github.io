@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { ContactForm } from "@/components/contact-form"
 import { Navbar } from "@/components/navbar"
 import { ScrollIndicator } from "@/components/scroll-indicator"
+import { ScrollToTop } from "@/components/scroll-to-top"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { HeroSection } from "@/components/hero-section"
 import {
@@ -34,6 +35,7 @@ export default function Home() {
       <AnimatedGradientBackground />
       <ParticleBackground />
       <ScrollIndicator />
+      <ScrollToTop />
       <SmoothScroll />
 
       {/* Navigation */}
