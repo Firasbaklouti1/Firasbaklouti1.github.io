@@ -9,6 +9,7 @@ import { ContactForm } from "@/components/contact-form"
 import { Navbar } from "@/components/navbar"
 import { ScrollIndicator } from "@/components/scroll-indicator"
 import { SmoothScroll } from "@/components/smooth-scroll"
+import { ScrollToTop } from "@/components/scroll-to-top"
 import { HeroSection } from "@/components/hero-section"
 import {
   AnimatedSection,
@@ -340,6 +341,9 @@ export default function Home() {
       </section>
 
       </main>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
 
       {/* Footer - Updated for Firas */}
       <footer className="py-8 px-4 bg-gray-800 dark:bg-gray-950 text-white relative">
