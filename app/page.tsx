@@ -15,6 +15,7 @@ import {
   AnimatedCard,
   ParticleBackground,
   AnimatedGradientBackground,
+  ScrollToTop,
 } from "@/components/client-animations"
 import { CertificationsSection } from "@/components/certifications-section"
 import portfolioDataRaw from "@/public/data/portfolio-en.json"
@@ -35,6 +36,7 @@ export default function Home() {
       <ParticleBackground />
       <ScrollIndicator />
       <SmoothScroll />
+      <ScrollToTop />
 
       {/* Navigation */}
       <Navbar />
