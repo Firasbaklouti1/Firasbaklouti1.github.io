@@ -24,3 +24,7 @@
 ## 2025-05-20 - [Post-Submission Interaction States]
 **Learning:** For forms in single-page applications, relying solely on ephemeral feedback like toasts can be insufficient for important actions. Replacing the form with a persistent success state (e.g., "Message Sent!") provides a clear, unambiguous terminal state and reduces cognitive load by removing now-unnecessary inputs.
 **Action:** Implement terminal success states for primary conversion forms to confirm completion and provide clear follow-up actions (e.g., "Send another message").
+
+## 2025-05-21 - [Interactive Visual Affordances]
+**Learning:** Users often expect project thumbnails to be interactive. Wrapping images in links and adding hover-triggered overlays (e.g., a scale-up effect and an icon) provides immediate visual feedback that the element is clickable, satisfying user intuition and improving discoverability.
+**Action:** Always provide clear visual affordances for interactive images, such as hover effects and icon overlays, to indicate they are links.

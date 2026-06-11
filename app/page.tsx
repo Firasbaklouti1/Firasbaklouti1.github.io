@@ -126,15 +126,22 @@ export default function Home() {
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="aspect-video relative rounded-md overflow-hidden mb-4 bg-gray-100 dark:bg-gray-700 transform transition-transform duration-500 hover:scale-[1.02]">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                    </div>
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group/image focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-md outline-none mb-4"
+                      aria-label={`View ${project.title} project`}
+                    >
+                      <div className="aspect-video relative rounded-md overflow-hidden bg-gray-100 dark:bg-gray-700 transform transition-transform duration-500 group-hover/image:scale-[1.02]">
+                        <Image src={project.image} alt={project.title} fill className="object-cover" />
+                        <div className="absolute inset-0 bg-purple-600/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <div className="bg-white/90 dark:bg-gray-900/90 p-3 rounded-full shadow-lg transform scale-0 group-hover/image:scale-100 transition-transform duration-300 delay-100">
+                            <ExternalLink className="w-6 h-6 text-purple-600" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <p className="text-gray-700 dark:text-gray-300">
                       {project.details}
                     </p>
@@ -152,10 +159,7 @@ export default function Home() {
                   </CardContent>
                   <CardFooter>
                     <Button asChild variant="outline" className="w-full relative overflow-hidden group bg-transparent">
-                      <Link
-                        href={project.link}
-                        target="_blank"
-                      >
+                      <Link href={project.link} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         <span className="relative z-10">View Project</span>
                         <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
@@ -289,8 +293,8 @@ export default function Home() {
                       <a
                         href={upworkLink.url}
                         target="_blank"
-                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        rel="noreferrer"
+                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors outline-none focus-visible:underline"
+                        rel="noopener noreferrer"
                       >
                         {upworkLink.name} Profile
                       </a>
@@ -302,8 +306,8 @@ export default function Home() {
                       <a
                         href={githubLink.url}
                         target="_blank"
-                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        rel="noreferrer"
+                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors outline-none focus-visible:underline"
+                        rel="noopener noreferrer"
                       >
                         {githubLink.name} Profile
                       </a>
@@ -315,8 +319,8 @@ export default function Home() {
                       <a
                         href={linkedinLink.url}
                         target="_blank"
-                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-                        rel="noreferrer"
+                        className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors outline-none focus-visible:underline"
+                        rel="noopener noreferrer"
                       >
                         {linkedinLink.name} Profile
                       </a>
@@ -358,6 +362,7 @@ export default function Home() {
                     <Link
                       href={upworkLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${upworkLink.name} Profile`}
                     >
@@ -375,6 +380,7 @@ export default function Home() {
                     <Link
                       href={githubLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${githubLink.name} Profile`}
                     >
@@ -392,6 +398,7 @@ export default function Home() {
                     <Link
                       href={linkedinLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label={`${linkedinLink.name} Profile`}
                     >

@@ -99,6 +99,7 @@ export function HeroSection() {
                     <Link
                       href={upworkLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="Upwork Profile"
                     >
@@ -116,6 +117,7 @@ export function HeroSection() {
                     <Link
                       href={githubLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="GitHub Profile"
                     >
@@ -133,6 +135,7 @@ export function HeroSection() {
                     <Link
                       href={linkedinLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="LinkedIn Profile"
                     >
@@ -144,13 +147,14 @@ export function HeroSection() {
                   </TooltipContent>
                 </Tooltip>
               )}
-              
+
               {stackoverflowLink && (
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Link
                       href={stackoverflowLink.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 transition-colors transform hover:scale-110 duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 rounded-full outline-none"
                       aria-label="StackOverflow Profile"
                     >

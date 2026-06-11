@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, FileText } from "lucide-react"
+import { Menu, X, FileText, Download } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 import { Button } from "@/components/ui/button"
 import {
@@ -166,6 +166,7 @@ export function Navbar() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="sm" className="relative overflow-hidden group bg-transparent">
+                    <Download className="w-4 h-4 mr-2" />
                     <span className="relative z-10">Download Resume</span>
                     <span className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                   </Button>
