@@ -126,15 +126,25 @@ export default function Home() {
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="aspect-video relative rounded-md overflow-hidden mb-4 bg-gray-100 dark:bg-gray-700 transform transition-transform duration-500 hover:scale-[1.02]">
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block aspect-video relative rounded-md overflow-hidden mb-4 bg-gray-100 dark:bg-gray-700 group/img focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none"
+                      aria-label={`View ${project.title} project`}
+                    >
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transform transition-transform duration-500 group-hover/img:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 to-blue-600/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                    </div>
+                      <div className="absolute inset-0 bg-purple-600/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div className="bg-white/90 dark:bg-gray-900/90 p-2 rounded-full transform translate-y-4 group-hover/img:translate-y-0 transition-transform duration-300 shadow-lg">
+                          <ExternalLink className="w-5 h-5 text-purple-600" />
+                        </div>
+                      </div>
+                    </Link>
                     <p className="text-gray-700 dark:text-gray-300">
                       {project.details}
                     </p>
