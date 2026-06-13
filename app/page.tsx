@@ -16,6 +16,7 @@ import {
   AnimatedCard,
   ParticleBackground,
   AnimatedGradientBackground,
+  ScrollToTop,
 } from "@/components/client-animations"
 import { CertificationsSection } from "@/components/certifications-section"
 import portfolioDataRaw from "@/public/data/portfolio-en.json"
@@ -37,6 +38,7 @@ export default function Home() {
       <ScrollIndicator />
       <ScrollToTop />
       <SmoothScroll />
+      <ScrollToTop />
 
       {/* Navigation */}
       <Navbar />
@@ -69,7 +71,10 @@ export default function Home() {
                 <ul className="space-y-2">
                   {about.keyExpertise.map((item, index) => (
                     <li key={index} className="flex items-start group">
-                      <ChevronRight className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300" />
+                        <ChevronRight
+                          className="w-5 h-5 text-purple-600 mt-0.5 flex-shrink-0 transform group-hover:translate-x-1 transition-transform duration-300"
+                          aria-hidden="true"
+                        />
                       <span className="text-gray-700 dark:text-gray-300">{item}</span>
                     </li>
                   ))}
@@ -155,6 +160,7 @@ export default function Home() {
                       <Link
                         href={project.link}
                         target="_blank"
+                        aria-label={`View ${project.title} project`}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         <span className="relative z-10">View Project</span>

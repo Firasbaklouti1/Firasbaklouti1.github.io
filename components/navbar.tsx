@@ -172,13 +172,21 @@ export function Navbar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                   <DropdownMenuItem asChild>
-                    <a href="/documents/resume-en.pdf" download="Firas_Baklouti_Resume_EN.pdf" className="cursor-pointer flex items-center">
+                    <a
+                      href="/documents/resume-en.pdf"
+                      download="Firas_Baklouti_Resume_EN.pdf"
+                      className="cursor-pointer flex items-center focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none rounded-sm"
+                    >
                       <FileText className="mr-2 h-4 w-4" />
                       <span>English Version</span>
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="/documents/resume-fr.pdf" download="Firas_Baklouti_Resume_FR.pdf" className="cursor-pointer flex items-center">
+                    <a
+                      href="/documents/resume-fr.pdf"
+                      download="Firas_Baklouti_Resume_FR.pdf"
+                      className="cursor-pointer flex items-center focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none rounded-sm"
+                    >
                       <FileText className="mr-2 h-4 w-4" />
                       <span>French Version</span>
                     </a>
