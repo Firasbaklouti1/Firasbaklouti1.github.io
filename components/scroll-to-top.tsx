@@ -4,21 +4,16 @@ import { useState, useEffect } from "react"
 import { ArrowUp } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const toggleVisibility = () => setIsVisible(window.scrollY > 400)
-    window.addEventListener("scroll", toggleVisibility)
+    window.addEventListener("scroll", toggleVisibility, { passive: true })
     return () => window.removeEventListener("scroll", toggleVisibility)
   }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-    const mainContent = document.getElementById("main-content")
-    if (mainContent) setTimeout(() => mainContent.focus({ preventScroll: true }), 800)
-  }
 
   return (
     <AnimatePresence>
@@ -29,15 +24,20 @@ export function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.5 }}
           className="fixed bottom-8 right-8 z-50"
         >
-          <Button
-            variant="outline"
-            size="icon"
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            className="rounded-full shadow-lg bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-purple-600/20 hover:border-purple-600 hover:text-purple-600 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2"
-          >
-            <ArrowUp className="h-5 w-5" />
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="default"
+                size="icon"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="rounded-full shadow-lg bg-purple-600 hover:bg-purple-700 text-white focus-visible:ring-2 focus-visible:ring-purple-600 focus-visible:ring-offset-2 outline-none border-none"
+                aria-label="Scroll to top"
+              >
+                <ArrowUp className="h-6 w-6" />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent side="left"><p>Scroll to top</p></TooltipContent>
+          </Tooltip>
         </motion.div>
       )}
     </AnimatePresence>

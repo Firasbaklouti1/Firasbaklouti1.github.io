@@ -24,3 +24,7 @@
 ## 2025-05-20 - [Post-Submission Interaction States]
 **Learning:** For forms in single-page applications, relying solely on ephemeral feedback like toasts can be insufficient for important actions. Replacing the form with a persistent success state (e.g., "Message Sent!") provides a clear, unambiguous terminal state and reduces cognitive load by removing now-unnecessary inputs.
 **Action:** Implement terminal success states for primary conversion forms to confirm completion and provide clear follow-up actions (e.g., "Send another message").
+
+## 2025-06-04 - [Shadcn Button Variant Consistency]
+**Learning:** In this project's Shadcn configuration, `variant="default"` is the primary action state. Using non-existent variants like `variant="primary"` results in a fallback to base styles without the intended brand colors or hover effects.
+**Action:** Always verify the `buttonVariants` in `components/ui/button.tsx` before applying variants to ensure consistent branding and interaction feedback.
